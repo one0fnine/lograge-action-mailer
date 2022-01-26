@@ -1,8 +1,8 @@
 require "bundler/setup"
-require "lograge/action_mailer"
+require "lograge-action-mailer"
 require "lograge"
 
-require 'simplecov'
+require "simplecov"
 SimpleCov.start
 
 RSpec.configure do |config|

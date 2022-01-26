@@ -1,4 +1,4 @@
-# LogrageActionMailer
+# Lograge::ActionMailer
 
 You get a single line with all the important information, like this:
 ```log
