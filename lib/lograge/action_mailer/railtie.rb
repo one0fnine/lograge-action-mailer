@@ -2,11 +2,12 @@
 
 require "rails/railtie"
 require "active_support"
-require "lograge"
+require "active_support/ordered_options"
 
 module Lograge
   module ActionMailer
     class Railtie < Rails::Railtie
+      config.lograge = ActiveSupport::OrderedOptions.new unless config.respond_to?(:lograge)
       config.lograge.action_mailer = ActiveSupport::OrderedOptions.new
       config.lograge.action_mailer.enabled = false
       config.lograge.action_mailer.ignore_events = []
